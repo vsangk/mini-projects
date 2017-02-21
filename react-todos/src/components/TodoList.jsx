@@ -7,12 +7,20 @@ class TodoList extends Component {
       <div>
         <ul>
           {this.props.todos.map(todo => (
-            <TodoItem key={todo.id} {...todo} />
+            <TodoItem
+              key={todo.id}
+              handleToggle={this.props.handleToggle}
+              handleRemove={this.props.handleRemove}
+              {...todo} />
           ))}
         </ul>
       </div>
     );
   }
+}
+
+TodoList.propTypes = {
+  todos: React.PropTypes.array.isRequired
 }
 
 export default TodoList;

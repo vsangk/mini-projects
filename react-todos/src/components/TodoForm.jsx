@@ -10,4 +10,10 @@ const TodoForm = ({ handleInputChange, handleSubmit, currentTodo }) => (
   </div>
 );
 
+TodoForm.propTypes = {
+  currentTodo: React.PropTypes.string.isRequired,
+  handleSubmit: React.PropTypes.func.isRequired,
+  handleInputChange: React.PropTypes.func.isRequired
+}
+
 export default TodoForm;
