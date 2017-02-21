@@ -1,13 +1,17 @@
-body, div, ul, li {
+body, div, ul, li, a {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: sans-serif;
-  background: #528CD0;
+  background: #4D69A7;
 }
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

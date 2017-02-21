@@ -7,7 +7,6 @@ import './index.css';
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App} />
-    <Route path='/active' component={App} />
     <Route path='/completed' component={App} />
   </Router>,
   document.getElementById('root')

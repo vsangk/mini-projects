@@ -22,14 +22,9 @@ export const removeTodo = (todoList, id) => {
 }
 
 export const filterTodos = (todoList, filter) => {
-  switch (filter) {
-    case '/active':
-      return todoList.filter(todo => !todo.isComplete);
-
-    case '/completed':
-      return todoList.filter(todo => todo.isComplete);
-
-    default:
-      return todoList;
+  if (filter === '/completed') {
+    return todoList.filter(todo => todo.isComplete);
+  } else {
+    return todoList.filter(todo => !todo.isComplete);
   }
 }

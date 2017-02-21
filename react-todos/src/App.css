@@ -1,7 +1,45 @@
-.app {
-  text-align: center;
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
 }
 
-.active {
-  font-weight: bold;
+.app {
+  margin: 0 auto;
+  background-color: white;
+  width: 70%;
+  height: 50%;
+  border-radius: 8px;
+}
+
+.filter-links {
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.filter-links a {
+  color: #fff;
+  background-color: #7f827d;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-links a:first-child {
+  border-top-left-radius: 8px;
+}
+
+.filter-links a:last-child {
+  border-top-right-radius: 8px;
+}
+
+.filter-links a.active {
+  background-color: #6BA4D3;
 }
