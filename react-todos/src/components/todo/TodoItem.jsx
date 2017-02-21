@@ -1,7 +1,7 @@
 import React from 'react';
 
-const TodoItem = ({ id, text, isComplete, handleToggle, handleRemove }) => (
-  <li>
+export const TodoItem = ({ id, text, isComplete, handleToggle, handleRemove }) => (
+  <li className="todo-item">
     <input
       type="checkbox"
       onChange={handleToggle.bind(null, id)}
@@ -16,5 +16,3 @@ TodoItem.propTypes = {
   text: React.PropTypes.string.isRequired,
   isComplete: React.PropTypes.bool
 }
-
-export default TodoItem;

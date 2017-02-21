@@ -1,3 +1,7 @@
-.App {
+.app {
   text-align: center;
+}
+
+.active {
+  font-weight: bold;
 }

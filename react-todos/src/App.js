@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import TodoList from './components/TodoList';
-import TodoForm from './components/TodoForm';
-import { addTodo, generateId, toggleTodo, removeTodo } from './lib/todoHelpers.js';
+import { TodoList, TodoForm, FilterLinks } from './components/todo';
+import { addTodo, generateId, toggleTodo, removeTodo, filterTodos } from './lib/todoHelpers.js';
 
 class App extends Component {
   state = {
@@ -42,14 +41,17 @@ class App extends Component {
   }
 
   render() {
+    const visibleTodos = filterTodos(this.state.todos, this.props.route.path);
+
     return (
-      <div className="App">
+      <div className="app">
+        <FilterLinks />
         <TodoForm
           currentTodo={this.state.currentTodo}
           handleInputChange={this.handleInputChange}
           handleSubmit={this.handleSubmit} />
         <TodoList
-          todos={this.state.todos}
+          todos={visibleTodos}
           handleToggle={this.handleToggle}
           handleRemove={this.handleRemove} />
       </div>

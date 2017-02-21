@@ -1,7 +1,7 @@
 import React from 'react';
 
-const TodoForm = ({ handleInputChange, handleSubmit, currentTodo }) => (
-  <div>
+export const TodoForm = ({ handleInputChange, handleSubmit, currentTodo }) => (
+  <div className="todo-form">
     <form onSubmit={handleSubmit}>
       <input type="text"
         onChange={handleInputChange}
@@ -15,5 +15,3 @@ TodoForm.propTypes = {
   handleSubmit: React.PropTypes.func.isRequired,
   handleInputChange: React.PropTypes.func.isRequired
 }
-
-export default TodoForm;
