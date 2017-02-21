@@ -1,6 +1,7 @@
-body, div, ul, li, a {
+body, div, ul, li, a, h1, h2 {
   margin: 0;
   padding: 0;
+  font-size: inherit;
 }
 
 body {

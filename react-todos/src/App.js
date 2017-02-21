@@ -54,15 +54,20 @@ class App extends Component {
 
     return (
       <div className="app">
-        <FilterLinks />
-        <TodoForm
-          currentTodo={this.state.currentTodo}
-          handleInputChange={this.handleInputChange}
-          handleSubmit={handleSubmit} />
-        <TodoList
-          todos={visibleTodos}
-          handleToggle={this.handleToggle}
-          handleRemove={this.handleRemove} />
+        <div className="todo-header">
+          <h2 className="todo-title">Work List</h2>
+        </div>
+        <div className="todo-app">
+          <FilterLinks />
+          <TodoForm
+            currentTodo={this.state.currentTodo}
+            handleInputChange={this.handleInputChange}
+            handleSubmit={handleSubmit} />
+          <TodoList
+            todos={visibleTodos}
+            handleToggle={this.handleToggle}
+            handleRemove={this.handleRemove} />
+        </div>
       </div>
     );
   }

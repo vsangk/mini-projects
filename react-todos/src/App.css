@@ -1,17 +1,35 @@
-#root {
+.app {
   height: 100vh;
   display: flex;
   flex-direction: center;
   align-items: center;
 }
 
-.app {
-  margin: 0 auto;
-  background-color: white;
+.todo-app, .todo-header {
   width: 65%;
   height: 60%;
   border-radius: 8px;
+}
+
+.todo-app {
+  margin: 0 auto;
+  background-color: white;
+  z-index: 10;
+}
+
+.todo-header {
+  position: absolute;
+  top: 8%;
+  left: 12%;
+  background-color: #252b3b;
   z-index: 1;
+}
+
+.todo-title {
+  font-family: 'Russo One';
+  font-size: 40px;
+  color: #fff;
+  padding: 30px 40px;
 }
 
 .delete {
