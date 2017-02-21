@@ -1,14 +1,18 @@
 import React from 'react';
 
-export const TodoForm = ({ handleInputChange, handleSubmit, currentTodo }) => (
-  <div className="todo-form">
-    <form onSubmit={handleSubmit}>
+export const TodoForm = (props) => {
+  const style = location.pathname === '/completed' ? { display: 'none' } : {};
+
+  return (
+    <form onSubmit={props.handleSubmit} className="todo-form">
       <input type="text"
-        onChange={handleInputChange}
-        value={currentTodo} />
+        style={style}
+        placeholder="Add a todo"
+        onChange={props.handleInputChange}
+        value={props.currentTodo} />
     </form>
-  </div>
-);
+  );
+};
 
 TodoForm.propTypes = {
   currentTodo: React.PropTypes.string.isRequired,

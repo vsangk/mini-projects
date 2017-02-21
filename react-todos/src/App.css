@@ -8,13 +8,20 @@
 .app {
   margin: 0 auto;
   background-color: white;
-  width: 70%;
-  height: 50%;
+  width: 65%;
+  height: 60%;
   border-radius: 8px;
+  z-index: 1;
+}
+
+.delete {
+  color: red;
+  float: right;
+  cursor: pointer;
 }
 
 .filter-links {
-  height: 15%;
+  height: 12%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -42,4 +49,23 @@
 
 .filter-links a.active {
   background-color: #6BA4D3;
+}
+
+.todo-form input {
+  font-size: 20px;
+}
+
+.todo-form input:focus {
+  outline: none;
+}
+
+.todo-form input, .todo-item {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 16px;
+}
+
+.todo-item {
+  border-bottom: 1px solid #ccc;
 }

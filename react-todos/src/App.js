@@ -26,6 +26,13 @@ class App extends Component {
     });
   }
 
+  handleError = (e) => {
+    e.preventDefault();
+    this.setState({
+      errorMessage: 'Input can\'t be blank'
+    });
+  }
+
   handleInputChange = (e) => {
     this.setState({ currentTodo: e.target.value });
   }
@@ -42,6 +49,8 @@ class App extends Component {
 
   render() {
     const visibleTodos = filterTodos(this.state.todos, this.props.route.path);
+    const handleSubmit = this.state.currentTodo === '' ?
+      this.handleError : this.handleSubmit;
 
     return (
       <div className="app">
@@ -49,7 +58,7 @@ class App extends Component {
         <TodoForm
           currentTodo={this.state.currentTodo}
           handleInputChange={this.handleInputChange}
-          handleSubmit={this.handleSubmit} />
+          handleSubmit={handleSubmit} />
         <TodoList
           todos={visibleTodos}
           handleToggle={this.handleToggle}

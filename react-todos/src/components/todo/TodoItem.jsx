@@ -7,7 +7,7 @@ export const TodoItem = ({ id, text, isComplete, handleToggle, handleRemove }) =
       onChange={handleToggle.bind(null, id)}
       checked={isComplete} />
     {text}
-    <span onClick={handleRemove.bind(null, id)}>X</span>
+    <span onClick={handleRemove.bind(null, id)} className="delete">X</span>
   </li>
 );
 
