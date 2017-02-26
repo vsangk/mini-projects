@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Auth0Lock from 'auth0-lock';
+import { CLIENT_ID, DOMAIN } from './utils/constants';
+import Login from './components/Login';
 import './App.css';
 
 class App extends Component {
+  componentWillMount() {
+    this.lock = new Auth0Lock(CLIENT_ID, DOMAIN);
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Login lock={this.lock} />
     );
   }
 }
