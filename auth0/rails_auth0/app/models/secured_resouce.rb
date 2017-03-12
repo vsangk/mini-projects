@@ -1,0 +1,2 @@
+class SecuredResouce < ApplicationRecord
+end
