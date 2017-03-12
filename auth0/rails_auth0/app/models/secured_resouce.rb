@@ -1,2 +1,0 @@
-class SecuredResouce < ApplicationRecord
-end
